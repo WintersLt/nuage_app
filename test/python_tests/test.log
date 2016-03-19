@@ -1,0 +1,27 @@
+2016-03-18 23:57:26,953 - test_rest - INFO - Executing nuage_app tests suite
+2016-03-18 23:57:30,799 - test_rest - INFO - test_get_index :PASS
+2016-03-18 23:57:33,359 - test_rest - INFO - test_post_resource :PASS
+2016-03-18 23:57:34,764 - test_rest - INFO - test_get_resource :PASS
+2016-03-18 23:57:38,380 - test_rest - INFO - test_put_resource :FAIL
+2016-03-18 23:57:39,561 - test_rest - INFO - test_delete_resource :PASS
+2016-03-18 23:57:39,561 - test_rest - INFO - ########################
+2016-03-18 23:57:39,561 - test_rest - INFO - Number of passed testcases: 4
+2016-03-18 23:57:39,562 - test_rest - INFO - Number of failed testcases: 1
+2016-03-18 23:59:08,989 - test_rest - INFO - Executing nuage_app tests suite
+2016-03-18 23:59:09,907 - test_rest - INFO - test_get_index :PASS
+2016-03-18 23:59:11,364 - test_rest - INFO - test_post_resource :PASS
+2016-03-18 23:59:13,046 - test_rest - INFO - test_get_resource :PASS
+2016-03-18 23:59:13,751 - test_rest - INFO - test_put_resource :FAIL
+2016-03-18 23:59:14,147 - test_rest - INFO - test_delete_resource :PASS
+2016-03-18 23:59:14,148 - test_rest - INFO - ########################
+2016-03-18 23:59:14,148 - test_rest - INFO - Number of passed testcases: 4
+2016-03-18 23:59:14,149 - test_rest - INFO - Number of failed testcases: 1
+2016-03-19 00:01:49,462 - test_rest - INFO - Executing nuage_app tests suite
+2016-03-19 00:01:50,089 - test_rest - INFO - test_get_index :PASS
+2016-03-19 00:01:51,492 - test_rest - INFO - test_post_resource :PASS
+2016-03-19 00:01:52,484 - test_rest - INFO - test_get_resource :PASS
+2016-03-19 00:02:02,700 - test_rest - INFO - test_put_resource :PASS
+2016-03-19 00:02:03,439 - test_rest - INFO - test_delete_resource :PASS
+2016-03-19 00:02:03,440 - test_rest - INFO - ########################
+2016-03-19 00:02:03,440 - test_rest - INFO - Number of passed testcases: 5
+2016-03-19 00:02:03,440 - test_rest - INFO - Number of failed testcases: 0

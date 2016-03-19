@@ -33,7 +33,7 @@ def test_get_index(base_url):
   try:
     response = requests.get(base_url, headers = accept_hdr)
   except requests.exceptions.ConnectionError:
-    logger.warn("test_delete_resource: FAIL")
+    logger.warn("test_get_index: FAIL")
     logger.error('error connectiong %s', base_url)
     return False
   return process_result(response, "test_get_index")
@@ -47,7 +47,7 @@ def test_post_resource(base_url):
   try:
     response = requests.post(base_url, headers = accept_hdr, data = json.dumps(payload))
   except requests.exceptions.ConnectionError:
-    logger.warn("test_delete_resource: FAIL")
+    logger.warn("test_post_resource: FAIL")
     logger.error('error connectiong %s', base_url)
     return False
   if response.status_code == 201:
@@ -62,10 +62,24 @@ def test_get_resource(base_url):
   try:
     response = requests.get(base_url, headers = accept_hdr)
   except requests.exceptions.ConnectionError:
-    logger.warn("test_delete_resource: FAIL")
+    logger.warn("test_get_resource: FAIL")
     logger.error('error connectiong %s', base_url)
     return False
   return process_result(response, "test_get_resource")
+
+def test_put_resource(base_url):
+  global resource_id
+  accept_hdr = {"Accept": "application/json", "Content-Type":"application/json"}
+  payload = {"name":"tolkein2","title":"Gollum2","content":"My Precious2"}
+  base_url = base_url + "/" + str(resource_id) + ".json"
+  response = []
+  try:
+    response = requests.put(base_url, headers = accept_hdr, data = json.dumps(payload))
+  except requests.exceptions.ConnectionError:
+    logger.warn("test_put_resource: FAIL")
+    logger.error('error connectiong %s', base_url)
+    return False
+  return process_result(response, "test_put_resource")
 
 def test_delete_resource(base_url):
   global resource_id
@@ -116,12 +130,14 @@ def main():
 
   logger.info('Executing nuage_app tests suite')
   num_passed = 0
-  total_tc = 4
+  total_tc = 5
   if test_get_index(url):
     num_passed+=1
   if test_post_resource(url):
     num_passed+=1
   if test_get_resource(url):
+    num_passed+=1
+  if test_put_resource(url):
     num_passed+=1
   if test_delete_resource(url):
     num_passed+=1
